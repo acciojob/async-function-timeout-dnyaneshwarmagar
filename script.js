@@ -8,7 +8,7 @@ document.getElementById('btn').addEventListener('click', async function(event) {
 
   try {
     // Introduce a delay before resolving the promise
-    await delayInSeconds(delay);
+    await delayInMilliSeconds(delay);
 
     // Display the user-provided text on the webpage
     document.getElementById('output').innerText = text;
@@ -18,7 +18,7 @@ document.getElementById('btn').addEventListener('click', async function(event) {
 });
 
 // Async function to introduce a delay before resolving the promise
-function delayInSeconds(delay) {
+function delayInMilliSeconds(delay) {
   return new Promise(resolve => {
     setTimeout(resolve, delay);
   });
